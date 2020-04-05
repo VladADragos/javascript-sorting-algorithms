@@ -21,17 +21,17 @@ function bubble_test() {
 
 // array should be sorted
 function bubble_sort_test() {
-    test(bubble_sort, (array) => isSorted(array));
+    test(bubble_sort, (array) => isSorted(array), 100000);
 }
 
 // array should be sorted
 function insertion_sort_test() {
-    test(insertion_sort, (array) => isSorted(array));
+    test(insertion_sort, (array) => isSorted(array), 100000);
 }
 
 // array should be sorted
 function selection_sort_test() {
-    test(selection_sort, (array) => isSorted(array));
+    test(selection_sort, (array) => isSorted(array), 100000);
 }
 
 

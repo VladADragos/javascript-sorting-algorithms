@@ -30,9 +30,9 @@ function getRndInteger(min, max) {
 
 
 function test(fn, condition, testCount = 100) {
-    console.log(`running ${fn.name} test`);
-    console.log("...");
-    console.log("...");
+    console.log(`running ${fn.name} test...`);
+    // console.log("");
+    console.time(`time elapsed`);
     let fails = 0;
     for (let i = 0; i < testCount; i++) {
         let array = generateArray();
@@ -51,6 +51,8 @@ function test(fn, condition, testCount = 100) {
     } else {
         console.log(`failed, ${fails}/100 tests`);
     }
+    console.timeEnd(`time elapsed`);
+    console.log("")
 }
 module.exports = {
     isSorted,
