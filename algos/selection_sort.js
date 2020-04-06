@@ -10,6 +10,8 @@ function selection_sort(array) {
             }
         }
     }
+
+    return array;
 }
 
 module.exports = {

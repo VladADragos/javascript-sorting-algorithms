@@ -1,9 +1,11 @@
 
 
 function merge_sort(array) {
+    return merge_sortp(array);
+
+}
+function merge_sortp(array) {
     return sort(array, 0, array.length - 1);
-
-
 }
 
 function sort(array, low, high) {
@@ -16,7 +18,7 @@ function sort(array, low, high) {
     let left = split(array, low, mid);
     let right = split(array, mid + 1, high)
 
-    return merge(merge_sort(left), merge_sort(right));
+    return merge(merge_sortp(left), merge_sortp(right));
 
 
 }

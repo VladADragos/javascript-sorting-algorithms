@@ -1,10 +1,13 @@
 
 function isSorted(array) {
 
-    let sortedArray = (Array.from(array)).sort();
+    // let sortedArray = Array.from(array);
+    // sortedArray = sortedArray.sort();
+    // console.log(array);
+    // console.log(sortedArray);
 
-    for (let i = 0; i < array.lenght; i++) {
-        if (array[i] !== sortedArray[i]) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > array[i + 1]) {
             return false;
         }
     }
@@ -36,19 +39,15 @@ function getRndInteger(min, max) {
 
 function test(fn, condition, testCount = 100, arraySize) {
     console.log(`running ${fn.name} test...`);
-    // console.log("");
     console.time(`time elapsed`);
     let fails = 0;
     for (let i = 0; i < testCount; i++) {
         let array = generateArray(arraySize);
-        fn(array);
 
-        if (condition(array)) {
-            // console.log("passed");
+        if (!condition(fn(array))) {
 
-        } else {
-            fails++;
             console.log("failed");
+            fails++;
         }
     }
     if (fails === 0) {

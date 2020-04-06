@@ -3,15 +3,12 @@ const { insertion_sort, insert } = require('./algos/insertion_sort');
 const { selection_sort } = require('./algos/selection_sort');
 
 const { merge, merge_sort, split } = require('./algos/merge_sort');
+
+const { isSorted } = require('./utils/testUtils');
 function main() {
 
-    let testArr = [69, 420, 0, 11, 78, 50];
+    let testArr = [3, 2, 69, 1, 0];
 
-    // selection_sort(testArr);
-    console.log(merge_sort(testArr));
-    // testArr.sp
 }
-
-setInterval
 
 main();

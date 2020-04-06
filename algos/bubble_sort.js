@@ -14,6 +14,7 @@ function bubble_sort(array) {
     for (let i = 0; i < array.length; i++) {
         bubble(array);
     }
+    return array;
 }
 
 

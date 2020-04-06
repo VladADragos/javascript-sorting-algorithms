@@ -6,6 +6,8 @@ function insertion_sort(array) {
 
 
     }
+
+    return array;
 }
 
 function insert(array, i, key) {
