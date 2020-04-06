@@ -14,12 +14,17 @@ function isSorted(array) {
 
 
 
-function generateArray() {
-    const lenght = getRndInteger(30, 100);
-    let array = new Array(lenght);
+function generateArray(arraySize = 500) {
+    // const lenght = getRndInteger(500, 1000);
+    let array;
+    if (arraySize === "random") {
+        array = new Array(getRndInteger(100, 1000));
+    } else {
+        array = new Array(arraySize);
+    }
 
-    for (let i = 0; i < lenght; i++) {
-        array[i] = getRndInteger(0, 100);
+    for (let i = 0; i < arraySize; i++) {
+        array[i] = getRndInteger(0, 1000);
     }
     return array;
 }
@@ -29,13 +34,13 @@ function getRndInteger(min, max) {
 }
 
 
-function test(fn, condition, testCount = 100) {
+function test(fn, condition, testCount = 100, arraySize) {
     console.log(`running ${fn.name} test...`);
     // console.log("");
     console.time(`time elapsed`);
     let fails = 0;
     for (let i = 0; i < testCount; i++) {
-        let array = generateArray();
+        let array = generateArray(arraySize);
         fn(array);
 
         if (condition(array)) {
