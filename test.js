@@ -3,13 +3,14 @@ const { insert, insertion_sort } = require('./algos/insertion_sort');
 const { test, isSorted } = require('./utils/testUtils');
 const { selection_sort } = require('./algos/selection_sort');
 const { merge_sort } = require('./algos/merge_sort');
-
+const { quick_sort } = require('./algos/quick_sort');
 
 function main() {
     bubble_sort_test();
     selection_sort_test();
     insertion_sort_test();
     merge_sort_test();
+    quick_sort_test();
 }
 main();
 
@@ -34,6 +35,11 @@ function selection_sort_test() {
 // array should be sorted
 function merge_sort_test() {
     test(merge_sort, (array) => isSorted(array), 100, 5000);
+}
+
+// array should be sorted
+function quick_sort_test() {
+    test(quick_sort, (array) => isSorted(array), 100, 5000);
 }
 
 

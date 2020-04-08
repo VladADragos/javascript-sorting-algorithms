@@ -8,6 +8,7 @@ function bubble(array) {
             array[i + 1] = first;
         }
     }
+
 }
 
 function bubble_sort(array) {

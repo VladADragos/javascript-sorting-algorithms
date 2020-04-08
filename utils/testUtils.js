@@ -38,8 +38,9 @@ function getRndInteger(min, max) {
 
 
 function test(fn, condition, testCount = 100, arraySize) {
-    console.log(`running ${fn.name} test...`);
-    console.time(`time elapsed`);
+    console.log('\x1b[36m', `running ${fn.name} test...`);
+    const timerString = `\t\x1b[33mtime elapsed \x1b[37m`
+    console.time(timerString);
     let fails = 0;
     for (let i = 0; i < testCount; i++) {
         let array = generateArray(arraySize);
@@ -51,11 +52,11 @@ function test(fn, condition, testCount = 100, arraySize) {
         }
     }
     if (fails === 0) {
-        console.log("passed all, (100/100) tests")
+        console.log('\x1b[32m', "\tpassed all, (100/100) tests")
     } else {
         console.log(`failed, ${fails}/100 tests`);
     }
-    console.timeEnd(`time elapsed`);
+    console.timeEnd(timerString);
     console.log("")
 }
 module.exports = {
