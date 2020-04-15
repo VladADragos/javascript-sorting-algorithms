@@ -19,8 +19,6 @@ function sort(array, low, high) {
     let right = split(array, mid + 1, high)
 
     return merge(merge_sortp(left), merge_sortp(right));
-
-
 }
 
 function split(array, low, high) {

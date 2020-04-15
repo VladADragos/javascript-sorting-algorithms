@@ -16,10 +16,6 @@ function main() {
 
     console.log(testArr);
 
-    // const p2 = partition(testArr, p1 + 1, testArr.length);
-    // const p2 = partition()
-    // console.log(p2);
-
 }
 
 main();
